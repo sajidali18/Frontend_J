@@ -1,0 +1,26 @@
+body{
+    font-family: 'Roboto Mono', monospace;
+}
+.head{
+    text-align: center;
+    word-spacing: 30px;
+    background-color: black;
+    color: white;
+    height: 40px;
+    padding-top: 20px;
+}
+.head a{
+    color: white;
+    text-decoration: none;
+}
+ h1{
+    text-align: center;
+    text-transform: capitalize;
+}
+.blog2{
+    padding-left: 700px;
+}
+.blog2 img{
+    height: 540px;
+    width:  640px;
+}
