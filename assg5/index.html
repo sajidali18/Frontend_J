@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagramme</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            /* border: 2px solid black; */
+            height: 100vh;
+            width: 100%;
+        }
+        .login{
+            border: 1px solid slategray;
+            height: 70vh;
+            width: 25%;
+            display: inline-block;
+            position: absolute;
+            right: 200px;
+            top: 100px;
+            text-align: center;
+            
+        }
+        .insta{
+            /* border: 1px solid slategray; */
+            height: 70vh;
+            width: 25%;
+            display: inline-block;
+            position: absolute;
+            left: 350px;
+            top: 100px;
+        }
+        img{
+            height: 100%;
+            width: 100%;
+        }
+        .form{
+            /* border: 2px solid black; */
+            height: 25vh;
+            margin-top: 40px;
+            padding-top: 10px;
+        }
+     #nm{
+        height: 30px;
+        width: 250px;
+        /* text-align: center; */
+        margin: 10px;
+     }
+     .lg{
+        height: 30px;
+        width: 250px;
+        background-color: rgb(47, 195, 245);
+        border-radius: 10px;
+        border: solid white;
+        color: white;
+     }
+     h4{
+        margin-top: 4px;
+        padding: 2px;
+        /* color: blue; */
+        color: slategray;
+        font-size: 15px;
+     }
+     #a{
+        color: rgb(42, 42, 194);
+     }
+     h1{
+        margin-top: 15px;
+     }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="insta">
+            
+            <img src="img.png" alt="">
+        </div>
+        <div class="login">
+            <h1><img src="name.png" alt=""></h1>
+            <div class="form">
+            <form action="">
+                <input type="name" id="nm" placeholder="Phone number,Username or Email"><br>
+                <input type="password"  id="nm" placeholder="Password"><br>
+                <!-- <input type="button" id="nm" placeholder="Login"> -->
+                <button class="lg">Login</button>
+            </form>
+           <h4>OR</h4>
+           <h4 id="a">Login with facebook</h4>
+           <h4>Forget Password?</h4>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
