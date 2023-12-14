@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .container {
+            /* display: flex; */
+            position: relative;
+            /* height: 100vh; */
+            width: 100%;
+        }
+
+        .left {
+            width: 20%;
+            height: 100vh;
+            background-color: #f44336;
+            position: fixed;
+            /* display: flex; */
+        }
+
+        .title {
+            padding: 80px 50px;
+
+        }
+
+        .title h1 {
+            color: white;
+            margin: 15px 0px;
+
+        }
+
+        .header ul li {
+            list-style: none;
+            padding: 15px 0px;
+        }
+
+        .header ul {
+            margin: 0px 50px;
+        }
+
+        .header ul li a {
+            text-decoration: none;
+            font-size: 30px;
+            color: white;
+            /* padding: 20px; */
+        }
+
+        .header ul li a:hover {
+            background-color: white;
+            color: black;
+            display: inline-block;
+        }
+
+        .right {
+            width: 80%;
+            height: 100vh;
+            position: absolute;
+            right: 0px;
+            /* border: 2px solid black; */
+
+        }
+
+        .text {
+            width: 98%;
+            height: 20vh;
+            /* border: 2px solid black; */
+        }
+
+        .text h1 {
+            margin: 50px 85px;
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .text h2 {
+            margin: 10px 85px;
+            font-size: 50px;
+            color: #f44336;
+        }
+
+        .hr {
+            width: 6%;
+            height: 1vh;
+            border-radius: 5px;
+            margin: 0px 85px;
+            background-color: red;
+            border: none;
+        }
+
+        .imgbox {
+            width: 90%;
+            height: 70vh;
+            position: relative;
+            left: 80px;
+            top: 15px;
+            /* border: 2px dashed black; */
+            margin: 20px 0px;
+        }
+
+        .images {
+            width: 100%;
+            height: 40vh;
+            /* border: 2px solid black; */
+            position: static;
+            left: 20px;
+            top: 10px;
+            margin: 10px 0px;
+        }
+
+        #img1 {
+            width: 46%;
+            height: 40vh;
+            border: none;
+            display: inline-block;
+            padding: 0px 10px;
+            border-style: none;
+        }
+
+        #img2 {
+            width: 46%;
+            height: 40vh;
+            border: none;
+            display: inline-block;
+            margin: 0px 12px;
+            border-style: none;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #sajid {
+            width: 100%;
+            height: 40vh;
+            /* border: 2px solid black; */
+            left: 20px;
+            top: 10px;
+            margin: 10px 0px;
+        }
+
+        .text1 {
+            width: 98%;
+            /* height: 20vh; */
+            /* border: 2px solid black; */
+        }
+
+        .text1 h1 {
+            margin-top: 66px;
+            margin-left: 10px;
+            font-size: 50px;
+            color: #f44336;
+        }
+
+        .hr1 {
+            width: 6%;
+            height: 1vh;
+            border-radius: 5px;
+            margin: -40px 10px;
+            background-color: red;
+            border: none;
+        }
+
+        .text2 {
+            width: 98%;
+            /* height: 20vh; */
+            margin-top: 250px;
+            /* border: 2px solid black; */
+        }
+
+        .text2 h1 {
+            margin-top: 66px;
+            margin-left: 10px;
+            font-size: 50px;
+            color: #f44336;
+        }
+
+        .hr2 {
+            width: 6%;
+            height: 1vh;
+            border-radius: 5px;
+            margin: -40px 10px;
+            background-color: red;
+            border: none;
+        }
+        #p{
+            font-size: 25px;
+            margin-top: 55px;
+            justify-content: center;
+        }
+
+        .text3 {
+            width: 98%;
+            /* height: 50vh; */
+            margin-top: 20px;
+            /* border: 2px solid black; */
+            display: flex;
+        }
+
+        #h3 {
+            margin-top: 200px;
+        }
+
+        #d1 {
+            width: 32%;
+            height: 100%;
+            /* border: 2px solid black; */
+            padding: 0px 2px;
+        }
+
+        .up {
+            height: 50%;
+            width: 100%;
+            /* border: 2px solid black; */
+        }
+
+        .down {
+            height: 49%;
+            width: 100%;
+            /* border: 2px solid black; */
+            background-color: #f1f1f1;
+        }
+        .down h3{
+            padding: 15px 18px;
+            font-size: 30px;
+        }
+        .down h4{
+            padding: 12px  18px;
+            font-size: 25px;
+            color: #827d7d;
+        }
+        .down p{
+            font-size: 20px;
+            justify-content: center;
+            padding: 0px 18px;
+        }
+        .text4{
+            width: 98%;
+            /* height: 100vh; */
+            margin-top: 10px;
+            /* border: 2px solid black; */
+        }
+        .text4 h1{
+            margin-top: 66px;
+            margin-left: 10px;
+            font-size: 50px;
+            color: #f44336;
+        }
+        .upper{
+            width: 100%;
+            /* height: 30vh; */
+            /* border: 2px solid black; */
+        }
+        .lower{
+            width: 100%;
+            /* height: 70vh; */
+            /* border: 2px dashed black; */
+            display: flex;
+        }
+        .basic{
+            width: 50%;
+            height: 100%;
+            border: none;
+            /* border: 2px solid black; */
+            padding: 0px 10px;
+        }
+        .pro{
+            width: 50%;
+            height: 100%;
+            /* border: 2px solid black; */
+        }
+        .box1{
+          width: 100%;
+          height: 10vh;
+          /* border: 2px solid black; */
+          background-color: #616161;
+          color: white;
+          font-size: 30px;
+          text-align:center;
+        }
+        .box1 h4{
+          margin: 30px 0px;
+        }
+        .box2 h4{
+          margin: 25px 0px;
+        }
+        .box2{
+          width: 100%;
+          height: 10vh;
+          border: 1px solid #dddd;
+          background-color: #c7c7c7;
+          font-size: 25px;
+          text-align:center ;
+        }
+        img:hover{
+
+            opacity: 0.8;
+            cursor: pointer;
+        }
+        .box3{
+          width: 100%;
+          height: 10vh;
+          border: 1px solid #dddd;
+          background-color: #c7c7c7;
+          /* font-size: 25px; */
+          text-align: center;
+        }
+        .box3 button{
+            margin: 15px 0px;
+            height: 50px;
+            width: 80px;
+            border: none;
+            background-color: white;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+        .box0{
+          width: 100%;
+          height: 10vh;
+          /* border: 2px solid black; */
+          background-color: #f44336;
+          color: white;
+          font-size: 30px;
+          text-align:center ;
+        }
+        .box0 h4{
+          margin: 30px 0px;
+        }
+        #button{
+            background-color: #f44336;
+            color: white;
+        }
+        #button:hover{
+            background-color: black;
+            color: white;
+        }
+        .form{
+            margin: 40px 0px;
+            font-size: 30px;
+        }
+        input{
+        height: 5vh;
+        width: 100%;
+        }
+        .form button{
+            margin: 10px 0px;
+            height: 5vh;
+            width: 100%;
+            background-color: #f44336;
+            border: none;
+            color: white;
+            text-align: center;
+            font-size: 25px;
+        }
+        button:hover{
+            background-color: grey;
+            color: black;
+        }
+        .footer{
+            width: 100%;
+            height: 20vh;
+           background-color: #f0eaea;
+            position: absolute;
+         
+        }
+        .tag h4{
+            position: absolute;
+            right: 0px;
+            bottom: 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="title">
+                <h1>Company <br> Name</h1>
+            </div>
+            <div class="header">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#showcase">Showcase</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#Designers">Designer</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="right" >
+            <div class="text" id="#home">
+                <h1>Interior Design</h1>
+                <h2>Showcase</h2>
+                <div class="hr">
+                </div>
+
+                <div class="imgbox">
+                    <div class="images" id="Showcase">
+                        <div class="img1" id="img1">
+                            <img src="image1.jpg" alt="">
+                        </div>
+                        <div class="img2" id="img2">
+                            <img src="image2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="image" id="sajid">
+                        <div class="image3" id="img1">
+                            <img src="image3.jpg" alt="">
+                        </div>
+                        <div class="image4" id="img2">
+                            <img src="image4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="imag" id="sajid">
+                        <div class="img5" id="img1">
+                            <img src="image5.jpg" alt="">
+                        </div>
+                        <div class="img6" id="img2">
+                            <img src="image6.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="text1" id="services">
+                        <h1>Services.</h1>
+                        <div class="hr1">
+                        </div>
+                        <p id="p">We are a interior design service that focus on what's best for your home and what's best for
+                            you! br
+
+                            Some text about our services - what we do and what we offer. We are lorem ipsum consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                            fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                            officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                            exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <div class="text2" id="designers">
+                        <h1>Designers.</h1>
+                        <div class="hr2">
+                        </div>
+                        <p id="p">The best team in the world. <br>
+
+                            We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+                            adipiscing elit, sed do eiusmod tempor incididunt ut labore et quis nostrud exercitation
+                            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
+                    <h3 id="h3">Our designers are thoughtfully chosen:</h3>
+                    <div class="text3">
+                        <div class="d1" id="d1">
+                            <div class="up">
+                                <img src="d1.jpg" alt="">
+                            </div>
+                            <div class="down">
+                              <h3>John Doe</h3>
+                              <h4>CEO & Founder</h4>
+                              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                              </p>
+                            </div>
+                        </div>
+                        <div class="d2" id="d1">
+                            <div class="up">
+                                <img src="d2.jpg" alt="">
+                           </div>
+                            <div class="down">
+                                <h3>Jane Doe</h3>
+                              <h4>Designer</h4>
+                              <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                              </p>
+                            </div>
+                        </div>
+                        <div class="d3" id="d1">
+                            <div class="up">
+                             <img src="d3.jpg" alt="">
+                            </div>
+                            <div class="down">
+                                <h3>Mikke Ross</h3>
+                                <h4>Architect</h4>
+                                <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text4">
+                        <div class="upper">
+                        <h1>Packages.</h1>
+                        <div class="hr2">
+                        </div>
+                        <p id="p">Some text our prices. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure</p>
+                    </div>
+                    <div class="lower" id="Packages">
+                     <div class="basic">
+                        <div class="box1"><h4>Basic</h4></div>
+                        <div class="box2"><h4>Floorplannig</h4></div>
+                        <div class="box2"><h4>10 Hour Support</h4></div>
+                        <div class="box2"><h4>Photography</h4></div>
+                        <div class="box2"><h4>20% Discount</h4></div>
+                        <div class="box2"><h4>Good deals</h4></div>
+                        <div class="box2"><h4>$ 199 <br> Per Room</h4></div>
+                        <div class="box3"><button>Sign Up</button></div>
+                     </div>
+                     <div class="pro">
+                        <div class="box0"><h4>Pro</h4></div>
+                        <div class="box2"><h4>Floorplannig</h4></div>
+                        <div class="box2"><h4>50 Hour Support</h4></div>
+                        <div class="box2"><h4>Photography</h4></div>
+                        <div class="box2"><h4>50% Discount</h4></div>
+                        <div class="box2"><h4>Good deals</h4></div>
+                        <div class="box2"><h4>$ 299 <br> Per Room</h4></div>
+                        <div class="box3"><button id="button">Sign Up</button></div>
+                     </div>
+                    </div>
+                    <div class="text5">
+                        <div class="upper" id="contact">
+                            <h1>contact.</h1>
+                            <div class="hr2">
+                            </div>
+                            <p id="p">Do you want us to style your home? Fill out the form and fill me in with the details :) We love meeting new people!</p>
+                        <div class="form">
+                            <label for="">Name</label><br>
+                            <input type="name"><br>
+                            <label for="">Email</label><br>
+                            <input type="email"><br>
+                            <label for="">Message</label><br>
+                            <input type="text"><br>
+                            <button>Send Message</button>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="footer">
+                    <footer>
+                        <div class="tag">
+                        <h4>Powered by w3.css</h4>
+                        </div>
+                    </footer>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
