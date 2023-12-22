@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Netflix India- Watch Tv Shows</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+        }
+        .container {
+            height: 100vh;
+            width: 100%;
+            /* border: 2px solid black; */
+            background-color: rgb(16, 15, 15);
+        }
+        .container img {
+            height: 100%;
+            width:  100%;
+            opacity: 0.3;
+            border: none;
+        }
+        .container header {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+        }
+        .logo {
+            width: 16.25rem;
+            height: 5.5rem;
+            margin: 30px 150px;
+        }
+        .logo img {
+            opacity: 1.5;
+        }
+        .box{
+            width: 30%;
+            height: 75vh;
+            /* border: 2px solid yellow; */
+            background-color: rgb(0,0,0,.75);
+            position: absolute;
+            top: 110px;
+            left: 600px;
+        }
+        .inner-box1{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            margin: 100px 100px;
+        }
+        .inner-box1 input{
+            margin: 10px 0px;
+            background-color: rgb(54, 53, 53);
+            color: #8c8c8c;
+            width: 100%;
+            height: 2.7rem;
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+        input[type="submit"]{
+            background-color: red;
+            margin: 30px 0px;
+            color: white;
+        }
+        .fit{
+            width: 100%;
+            height: 2.8rem;
+            /* border: 2px solid yellow; */
+            margin-top: -25px;
+            padding: 15px;
+            position: relative;
+        }
+        input[type="checkbox"]{
+            height: 15px;
+            width: 15px;
+        }
+        .fit h4{
+            position:absolute;
+            right: 15px;
+            top: 13px;
+            color: #8c8c8c;
+        }
+        .fit input {
+          position: absolute;
+          left: 10px;
+          top: 5px;
+        }
+        label{
+          position: absolute;
+          left: 35px;
+          top: 15px;
+          color: #8c8c8c;
+        }
+        .inner-box2{
+            width: 100%;
+            /* height: 20vh; */
+        }
+        .inner-box2 h3{
+          margin: 17px 5px;
+          color: #8c8c8c;
+        }
+        a{
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .inner-box2 p{
+            margin: 25px 5px;
+            color: #8c8c8c;
+            font-size: 13px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/ca6a7616-0acb-4bc5-be25-c4deef0419a7/c5af601a-6657-4531-8f82-22e629a3795e/IN-en-20231211-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+            alt="">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+        </header>
+        <div class="box">
+           <div class="inner-box1">
+            <h1>Sign Up</h1>
+            <input type="email" placeholder="Email Or Phone Number">
+            <input type="password" placeholder="Password">
+            <input type="submit" value="Sign In">
+            <div class="fit">
+                <input type="checkbox">
+                <label for="text">Remember Me</label>
+                <h4>Need Help?</h4>
+            </div>
+            <div class="inner-box2">
+                <h3>New to Netflix? <a href="">Sign up now.</a></h3>
+                <p>Sign in is protected by Google reCAPTCHA to ensure you’re not a bot. <![CDATA[<b>Learn more.</b>]]></p>
+            </div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

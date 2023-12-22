@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Netflix India- Watch Tv Shows</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+        .container {
+
+            width: 100%;
+            /* border: 2px solid black; */
+            background-color: rgb(16, 15, 15);
+            height: 75vh;
+        }
+
+        .container img {
+            height: 100%;
+            width: 100%;
+            opacity: 0.3;
+            border: none;
+        }
+
+        .container header {
+            width: 100%;
+            position: absolute;
+            top: 0px;
+        }
+
+        .logo {
+            width: 16.25rem;
+            height: 5.5rem;
+            margin: 30px 150px;
+
+        }
+
+        .logo img {
+            opacity: 1.5;
+        }
+
+        .button1 {
+            width: 115px;
+            height: 50px;
+            position: absolute;
+            right: 350px;
+            top: 50px;
+        }
+
+        .button2 {
+            width: 115px;
+            height: 50px;
+            position: absolute;
+            right: 180px;
+            top: 50px;
+        }
+
+        .button2 button {
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border: none;
+        }
+
+        .button1 button {
+            width: 100%;
+            height: 100%;
+            background-color: grey;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border: none;
+        }
+
+        .box {
+            width: 100%;
+            position: absolute;
+            top: 200px;
+            text-align: center;
+        }
+
+        .box h1 {
+            color: white;
+            font-size: 65px;
+            font-weight: bold;
+
+
+        }
+
+        .box h3 {
+            color: white;
+
+        }
+
+        .box h4 {
+            color: white;
+
+        }
+
+        .box h1,
+        h3,
+        h4,
+        form {
+
+            margin: 30px 0px;
+
+        }
+
+
+        form input[type="email"] {
+            background-color: rgb(54, 53, 53);
+            padding: 12px;
+            color: white;
+            width: 20%;
+            font-size: 20px;
+            /* border: none; */
+            border: 1px solid white;
+            border-radius: 5px;
+        }
+
+        form input[type="submit"] {
+            width: 12%;
+            padding: 12px;
+            font-size: 20px;
+            background-color: red;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin: 0px 10px;
+        }
+
+        .line-1 {
+            width: 100%;
+            height: 0.7rem;
+            background-color: rgb(35, 35, 35);
+        }
+
+        .container2 {
+            background-color: black;
+            /* height: 60vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .left {
+            /* border: 2px solid yellow; */
+            /* width: 40%; */
+            /* height: 40vh; */
+            color: white;
+            font-weight: bold;
+        }
+
+        .right {
+            /* border: 2px solid yellow; */
+            /* width: 40%; */
+            /* height: 40vh; */
+        }
+
+        .right img {
+            width: 90%;
+            height: 100%;
+        }
+
+        .text {
+            margin: 105px 180px;
+            padding: 10px;
+            font-size: 35px;
+
+        }
+
+        .text h2 {
+            /* font-weight: bold; */
+            font-size: 15px;
+            margin: 10px 0px;
+        }
+
+        .container3 {
+            background-color: black;
+            /* height: 60vh; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .first {
+            margin-left: 150px;
+        }
+
+        .first img {
+            width: 90%;
+            height: 100%;
+        }
+
+        .second text {
+            margin: 105px 180px;
+            padding: 10px;
+            font-size: 35px;
+        }
+
+        .second {
+            color: white;
+            font-weight: bold;
+        }
+
+        .text h2 {
+            /* font-weight: bold; */
+            font-size: 15px;
+            margin: 10px 0px;
+        }
+
+        .faq {
+            background-color: black;
+            height: 100vh;
+            position: relative;
+        }
+
+        .head {
+            font-size: 35px;
+            color: white;
+            position: absolute;
+            top: 30px;
+            left: 350px;
+        }
+
+        .box {
+            /* border: 2px solid yellow; */
+            width: 80%;
+            /* height: 100vh; */
+            position: absolute;
+            left: 125px;
+            top: 130px;
+        }
+
+        .inner-box {
+            width: 90%;
+            /* border: 2px solid yellow; */
+            /* height: 80px; */
+            position: relative;
+            margin: 10px auto;
+            background-color: rgb(45, 45, 45);
+            color: white;
+            text-align: left;
+            font-size: 25px;
+            padding: 25px;
+        }
+
+        .inner-box button {
+            position: absolute;
+            right: 20px;
+            font-size: 30px;
+
+        }
+
+        #email {
+            background-color: black;
+            padding: 12px;
+            color: rgb(255, 255,255);
+            width: 20%;
+            font-size: 20px;
+            border: 1px solid white;
+            border-radius: 5px;   
+        }
+        .container4{
+            height: 70vh;
+            background-color: black;
+            /* position: relative; */
+        }
+        .footer1{
+           border: 2px solid yellow;
+           /* width: 70%; */
+           /* position: relative;  */
+           /* left: 150px;
+           top: 100px; */
+           /* display: inline-block; */
+        }
+        ul{
+            /* height: 100%;
+            width: 75%; */
+            /* display: flex;
+            flex-wrap: wrap; */
+            /* flex-direction: row; */
+            /* text-align: center; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/ca6a7616-0acb-4bc5-be25-c4deef0419a7/c5af601a-6657-4531-8f82-22e629a3795e/IN-en-20231211-popsignuptwoweeks-perspective_alpha_website_large.jpg"
+            alt="">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="button1">
+                <button>English</button>
+            </div>
+            <div class="button2">
+                <button>Sign In</button>
+            </div>
+        </header>
+
+        <div class="box">
+            <h1>Enjoy big movies, hit series and more from ₹149.</h1><br>
+            <h3>Join today. Cancel anytime.</h3>
+            <h4>Ready to watch? Enter your email to create or restart your membership</h4>
+            <div class="form">
+                <form action="">
+                    <input type="email" placeholder="Email Address">
+                    <input type="submit" value="Get Started >">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="line-1">
+    </div>
+    <div class="container2">
+        <div class="left">
+            <div class="text">
+                <h1>Enjoy on your TV</h1>
+                <h2>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</h2>
+            </div>
+        </div>
+        <div class="right">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="">
+        </div>
+    </div>
+    <div class="line-1">
+    </div>
+    <div class="container3">
+        <div class="first">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="">
+        </div>
+        <div class="second">
+            <div class="text">
+                <h1>Download your shows to watch offline</h1>
+                <h2>Save your favourites easily and always have something to watch.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="line-1">
+    </div>
+    <div class="container2">
+        <div class="left">
+            <div class="text">
+                <h1>Watch everywhere</h1>
+                <h2>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</h2>
+            </div>
+        </div>
+        <div class="right">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile-in.png"
+                alt="">
+        </div>
+    </div>
+    <div class="line-1">
+    </div>
+    <div class="container3">
+        <div class="first">
+            <img src="https://occ-0-2590-2186.1.nflxso.net/dnm/api/v6/19OhWN2dO19C9txTON9tvTFtefw/AAAABVr8nYuAg0xDpXDv0VI9HUoH7r2aGp4TKRCsKNQrMwxzTtr-NlwOHeS8bCI2oeZddmu3nMYr3j9MjYhHyjBASb1FaOGYZNYvPBCL.png?r=54d"
+                alt="">
+        </div>
+        <div class="second">
+            <div class="text">
+                <h1>Download your shows to watch offline</h1>
+                <h2>Save your favourites easily and always have something to watch.</h2>
+            </div>
+        </div>
+    </div>
+    <div class="line-1">
+    </div>
+    <div class="faq">
+        <div class="head">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="box">
+            <div class="inner-box">
+                What is Netflix? <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="inner-box">
+                How Much Does Netflix Cost? <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="inner-box">
+                Where Can i Watch <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="inner-box">
+                How Do I Cancel? <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="inner-box">
+                Where Can I Watch On Netflix? <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="inner-box">
+                Is Netflix Good For Kids? <button><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <h4>Ready to watch? Enter your email to create or restart your membership</h4>
+            <div class="form">
+                <form action="">
+                    <input type="email" placeholder="Email Address" id="email">
+                    <input type="submit" value="Get Started >">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="line-1">
+    </div>
+    <div class="container4">
+    <div class="footer1">
+        <ul>
+            <li><a href="">FAQ</a></li>
+            <li><a href="">Investor Relations</a></li>
+            <li><a href="">Privacy</a></li>
+            <li><a href="">Speed Test</a></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+<!-- <li><a href="">Help Centre</a></li>
+<li><a href="">Jobs</a></li>
+<li><a href="">Cookie Preferences</a></li>
+<li><a href="">Account</a></li>
+<li><a href="">Ways to Watch</a></li>
+<li><a href="">Corporate Information</a></li>
+<li><a href="">Only on Netflix</a></li>
+<li><a href="">Media Centre</a></li>
+<li><a href="">Terms of Use</a></li>
+<li><a href="">Contact Us</a></li> -->
