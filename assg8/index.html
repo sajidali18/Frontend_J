@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Eiser ecommerce</title>
     <style>
         * {
@@ -16,7 +18,7 @@
 
         .header {
             /* background: #f6f6f6; */
-            background: yellow;
+            background-color: #ffff;
             min-width: 1400px;
         }
 
@@ -24,8 +26,11 @@
             height: 30px;
             position: relative;
             margin-right: auto;
-            margin-left:  auto ;
-            
+            margin-left: auto;
+        }
+
+        .cont {
+            background-color: #f6f6f6;
         }
 
         .header-left {
@@ -53,46 +58,338 @@
             text-decoration: none;
             color: black;
         }
-        .header-down{
+
+        .header-down {
             height: 15vh;
-            border: 2px solid black;
             display: flex;
             align-items: center;
-            /* width: 200%; */
-            /* position: fixed; */
         }
-        .logo{
-            display: flex; 
+
+        .logo {
+            display: flex;
             position: relative;
             left: 180px;
         }
-        .bar ul{
+
+        .bar ul {
             display: flex;
             margin: 10px 205px;
             padding: 0px 20px;
             list-style: none;
 
         }
-        .bar ul li a{
+
+        .bar ul li a {
             text-decoration: none;
             color: black;
             margin: 0px 40px;
         }
-        .bar{
-            /* position: absolute;
-            margin: auto; */
-        }
-        
 
-        
-        @media(min-width:1200px) {
-            .container {
-                max-width: 1140px;
+        .icon {
+            font-size: 16px;
+            line-height: 40px;
+            color: #4a4a4a;
+            margin: 0px 10px;
+        }
+
+        .bar-right ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header-bar-right {
+            display: flex;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .burger button {
+            margin-left: 30rem;
+            color: #1641ff;
+            border: none;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .section-page {
+            background: url(https://themewagon.github.io/eiser/img/banner/banner-bg.jpg) no-repeat center bottom;
+            background-size: cover;
+            min-height: 900px;
+            min-width: 1400px;
+            z-index: 1;
+        }
+
+        .section-container {
+            min-height: 900px;
+            position: relative;
+            width: 100%;
+        }
+
+        .d-flex {
+            display: flex !important;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .text-image {
+            /* margin-left: 200px; */
+            color: #ffff;
+            width: 100%;
+            padding-left: 180px;
+            padding-right: 150px;
+        }
+
+        .text-image h3 {
+            font-size: 14px;
+            color: #ffff;
+        }
+
+        .text-image h1 {
+            font-size: 52px;
+            font-weight: 700;
+            margin: 15px -3px;
+        }
+
+        .text-image h1 span {
+            color: #71cd14;
+        }
+
+        .text-image p {
+            font-size: 25px;
+            font-weight: normal;
+        }
+
+        .collection {
+            margin-top: 40px;
+        }
+
+        .collection button {
+            background-color: #71cd14;
+            color: #ffff;
+            font-size: 14px;
+            padding: 15px 25px;
+            font-weight: 500;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 6px;
+        }
+
+        .collection button:hover {
+            background-color: transparent;
+            color: #71cd14;
+            border: 1px solid #71cd14;
+        }
+
+        /* .ali{
+           position: relative;
+           width: 100%;
+           margin-left:auto;
+           margin-right: auto;
+         } */
+        .inner-section {
+            margin: 30px 180px;
+            display: flex;
+            flex-wrap: wrap;
+            /* justify-content: center; */
+        }
+
+        .box-1 {
+            padding: 30px 30px;
+            border: 1px solid #eff2ef;
+            /* display: inline-block; */
+            font-weight: 500;
+            margin-left: 43px;
+        }
+
+        .box-1 h3 {
+            margin-top: 25px;
+        }
+
+        .box-1 p {
+            margin-top: 30px;
+            color: #797979;
+
+        }
+
+        .inner-box {
+            /* margin: 16px 0px; */
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .inner-box a {
+            color: #4a4a4a;
+            font-size: 35px;
+        }
+        .section-2 {
+            min-width: 1400px;
+        }
+        .feature-product{
+            border: 2px solid black;
+            /* height: 30vh; */
+            min-width: 1400px;
+        }
+        .feature-text{
+            text-align: center;
+            /* border: 2px solid black; */
+            /* height: 20vh; */
+            margin-top: 25px;
+        }
+        .main-text span{
+            border: 1px solid #4a4a4a;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2a2a2a;
+            padding: 15px 10px;
+        }
+        .feature-text p{
+            margin-top: 35px;
+            color: #797979;
+        }
+        .product-container{
+            /* position: relative; */
+            /* width: 100%; */
+            padding-right: 150px;
+            padding-left: 150px;
+        }
+        .row{
+            /* position: relative; */
+        }
+        .product-1{
+            position: relative;
+            left: 0px;
+            z-index: 0;
+        }
+        .product-1 img{
+            /* height: 400px; */
+        }
+        .hover-view{
+            height: 65px;
+            position: relative;
+            top: -130px;
+            width: 22%;
+            text-align: center;
+            padding: 20px 0px;
+            background-color: rgba(113,205,20,0.4);
+            margin-left: 25px;
+            display: none;
+        }
+        .hover-view a{
+            font-size: 30px;
+            margin-right: 20px;
+            color: black;
+            border-radius: 45px;
+            background-color: white;
+            padding: 8px 8px;
+        }
+        .text-box{
+            border: 2px solid black;
+            height: 70px;
+            position: relative;
+            bottom: 130px;
+            width: 27%;
+        }
+        .product-1:hover .hover-view{
+            display: block;
+        }
+        @media (max-width:1444px) {
+            .box-1 {
+                margin: 12px;
             }
         }
+
         @media(max-width:992px) {
-            .header-right{
+            .header-right {
                 display: none;
+            }
+
+            .header-left {
+                left: 100px;
+            }
+
+            .header-bar-right {
+                display: none;
+            }
+
+            .burger {
+                display: block;
+            }
+        }
+
+        @media (max-width:860px) {
+            .section-page {
+                min-height: 1000px;
+            }
+
+            .d-flex {
+                align-items: end;
+            }
+
+            .text-image {
+                padding-left: 75px;
+            }
+        }
+
+        @media (max-width:788px) {
+            .section-page {
+                min-height: 1200px;
+            }
+        }
+
+        @media (max-width: 670px) {
+            .section-page {
+                min-height: 1400px;
+            }
+        }
+
+        @media (max-width: 588px) {
+            .section-page {
+                min-height: 1500px;
+            }
+
+            .d-flex {
+                align-items: end;
+            }
+
+            .text-image {
+                padding-left: 75px;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .section-page {
+                min-width: 1300px;
+            }
+
+            .d-flex {
+                align-items: end;
+            }
+
+            .text-image {
+                padding-left: 75px;
+            }
+        }
+
+        @media (max-width:290px) {
+            .inner-section {
+                margin-right: 430px;
+            }
+
+            .box-1 {
+                width: 46%;
+            }
+        }
+
+        @media (max-width:227px) {
+
+            /* .inner-section {
+                margin-left: 430px;
+            } */
+            .box-1 {
+                width: 100%;
             }
         }
     </style>
@@ -100,39 +397,121 @@
 
 <body>
     <div class="header">
-        <div class="container">
-            <div class="header-left">
-                <p>Phone: +01 256 25 235</p>
-                <p>email: info@eiser.com</p>
-            </div>
-            <div class="header-right">
-                <ul>
-                    <li><a href="">Gift Card</a></li>
-                    <li><a href="">Track Order</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
+        <div class="cont">
+            <div class="container">
+                <div class="header-left">
+                    <p>Phone: +01 256 25 235</p>
+                    <p>email: info@eiser.com</p>
+                </div>
+                <div class="header-right">
+                    <ul>
+                        <li><a href="">Gift Card</a></li>
+                        <li><a href="">Track Order</a></li>
+                        <li><a href="">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="header-down">
             <div class="logo">
-                <img src="https://themewagon.github.io/eiser/img/logo.png" alt="">  
-            <div class="bar">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Shop</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Pages</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
+                <img src="https://themewagon.github.io/eiser/img/logo.png" alt="">
+                <div class="burger">
+                    <button><i class="fa-solid fa-bars"></i></button>
+                </div>
             </div>
-            <div class="bar-right">
-                <ul>
-                    <li><a href=""><i class="ti-user" aria-hidden="true"></i></a></li>
-                </ul>
+            <div class="header-bar-right">
+                <div class="bar">
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Shop</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Pages</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="bar-right">
+                    <ul>
+                        <li><a href="" class="icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li><a href="" class="icon"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="" class="icon"><i class="fa-regular fa-user"></i></a></li>
+                        <li><a href="" class="icon"><i class="fa-regular fa-heart"></i></a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
         </div>
     </div>
-</body>
+    <section class="section-page">
+        <div class="section-container d-flex">
+            <div class="text-image">
+                <h3>MEN COLLECTION</h3>
+                <h1> <span>Show</span> Your <br> Personal <span>Style</span></h1>
+                <p>Fowl saw dry which a above together place.</p>
+                <div class="collection">
+                    <button>view collection</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="section-2">
+        <div class="inner-section">
 
+            <div class="box-1">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-indian-rupee-sign"></i></a>
+                    <h3>Money back gurantee</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-truck"></i></a>
+                    <h3>Free Delivery</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+
+            <div class="box-1">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-headphones"></i></a>
+                    <h3>always support</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+            <div class="box-1 ">
+                <div class="inner-box">
+                    <a href="#"><i class="fa-solid fa-shield-halved"></i></a>
+                    <h3>Secure payment</h3>
+                    <p>Shall open divide a one</p>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="feature-product">
+            <div class="feature-text">
+                <div class="main-text">
+                    <span>FEATURED PRODUCT</span>
+                </div>
+                <p>Bring called seed first of third give itself now ment</p>
+            </div>
+        <div class="product-container">
+        <div class="row">
+           <div class="product-1">
+               <img src="https://themewagon.github.io/eiser/img/product/feature-product/f-p-1.jpg" alt="">
+               <div class="hover-view"> 
+                   <a href="#"><i class="fa-regular fa-eye"></i></a>
+                   <a href="#"><i class="fa-regular fa-heart"></i></a>
+                   <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+                <div class="text-box">
+                    <a href="#"><h3>Latest Men Sneaker's</h3></a> <br>
+                    <span>$25</span>
+                    <del>$35</del>
+                  
+                </div>
+           </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
