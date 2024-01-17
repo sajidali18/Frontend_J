@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1">this is my javascrpt programme</h1>
+    <h1 id="h3"></h1>
+     <button id="upper">uppercase</button>
+     <button id="lower">uppercase</button>
+     <button id="red">red</button>
+     <button id="yellow">yellow</button>
+      <button id="date">Date</button>
+      <button id="btn">print this page</button>
+      
+    <script>
+    //    console.log("hello world!!");
+    //    alert("this is my javascript programme");
+    //    document.write("hellow world");
+
+    document.getElementById("upper").onclick = function (){
+        document.getElementById("h1").style.textTransform = "uppercase";
+    }
+    document.getElementById("lower").onclick = function (){
+        document.getElementById("h1").style.textTransform = "lowercase";
+    }
+    document.getElementById("red").onclick = function(){
+        document.getElementById("h1").style.color = "red";
+    }
+    document.getElementById("yellow").onclick = function(){
+        document.getElementById("h1").style.color = "yellow";
+    }
+    document.getElementById("date").onclick =  function (){
+        document.getElementById("h3").innerText = new Date().toDateString()
+    }
+    innerHTML = window.print();
+    document.getElementById("btn").onclick =  function (){
+    }
+    </script>
+</body>
+</html>
