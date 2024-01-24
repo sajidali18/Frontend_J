@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #h4 {
+        width: 50%
+    }
+
+    /* #btn1,#btn2,#plus,#minus{
+    display: none;
+    } */
+    #buttons {
+        display: none;
+    }
+
+    #red {
+        margin-right: 10px;
+        border-radius: 25px;
+        padding: 25px;
+        background-color: red;
+        border: none;
+        cursor: pointer;
+        
+    }
+
+    #yellow {
+        background-color: yellow;
+        margin-right: 10px;
+        border-radius: 25px;
+        padding: 25px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #green{
+        background-color: green;
+        margin-right: 10px;
+        border-radius: 25px;
+        padding: 25px;
+        cursor: pointer;
+        border: none;
+    }
+
+    #blue {
+        background-color: blue;
+        margin-right: 10px;
+        border-radius: 25px;
+        padding: 25px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #black {
+        background-color: black;
+        margin-right: 10px;
+        border-radius: 25px;
+        padding: 25px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .colors {
+        display: flex;
+        margin-top: 25px;
+        padding: 0px 0px;
+    }
+    .container{
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .class button{
+        background-color: green;
+        border-radius: 10px;
+        padding: 10px 10px;
+        border: none;
+        color: white;
+    }
+    
+</style>
+
+<body>
+    <div class="container" id="container">
+    <h1 id="h1">Select Your Domain</h1>
+    <select name="" id="select">
+        <option value="">Make Your Choice</option>
+        <option value="react">React </option>
+        <option value="django">Django</option>
+        <option value="AWS">AWS</option>
+    </select>
+    <div class="colors">
+       
+            <button id="red"></button>
+            <button id="yellow"></button>
+            <button id="green"></button>
+            <button id="blue"></button>
+            <button id="black"></button>
+    
+    </div>
+    <p id="h4"></p>
+    <div class="class" id="buttons">
+        <button id="btn1">upper case</button>
+        <button id="btn2">lower case</button>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+    </div>
+</div>
+    <script>
+
+        document.getElementById("select").onclick = function () {
+            let a = document.getElementById("select").value;
+
+            if (a == "react") {
+                document.getElementById("h4").innerText = "React is a free and open-source front-end JavaScript library for building user interfaces based on components. It is maintained by Meta and a community of individual developers and companies.React Hooks can be a powerful addition to your application, however, implementing authentication and authorization on your own can still be tricky. Thanks to Auth0, you can implement it mostly out-of-the-box with just a little effort from your side! Auth0 is a managed authentication platform that provides connections to all of the major social media logins such as Twitter, Google, and Facebook.";
+                document.getElementById("buttons").style.display = "block";
+            }
+            else if (a == "django") {
+                document.getElementById("h4").innerText = "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.The DSF makes an annual award in honour of early Django contributor Malcolm Tredinnick, to the person who best exemplifies the spirit of Malcolm’s work - someone who welcomes, supports and nurtures newcomers; freely gives feedback and assistance to others, and helps to grow the community."
+                document.getElementById("buttons").style.display = "block";
+            }
+            else if (a == "AWS") {
+                document.getElementById("h4").innerText = "AWS services are delivered to customers via a network of AWS server farms located throughout the world. Fees are based on a combination of usage (known as a  model), hardware, operating system, software, or networking features chosen by the subscriber require availability, redundancy, security, and service options. Subscribers can pay for a single virtual AWS computer, a dedicated physical computer, or clusters of either.[7] Amazon provides select portions of security for subscribers (e.g. physical security of the data centers) while other aspects of security are the responsibility of the subscriber (e.g. account management, vulnerability scanning, patching). AWS operates from many global geographical regions including seven in North America.";
+                document.getElementById("buttons").style.display = "block";
+            }
+        }
+        document.getElementById("btn1").onclick = function () {
+            document.getElementById("h4").style.textTransform = "Uppercase";
+        }
+        document.getElementById("btn2").onclick = function () {
+            document.getElementById("h4").style.textTransform = "lowercase";
+        }
+        let counter = 16;
+        document.getElementById("plus").onclick = function () {
+            counter++;
+            document.getElementById("h4").style.fontSize = counter + "px";
+
+        }
+        document.getElementById("minus").onclick = function () {
+            counter--;
+            document.getElementById("h4").style.fontSize = counter + "px";
+        }
+        document.getElementById("red").onclick = function(){
+            document.getElementById("container").style.backgroundColor = "red";
+        }
+        document.getElementById("yellow").onclick = function(){
+            document.getElementById("container").style.backgroundColor = "yellow";
+        }
+        document.getElementById("green").onclick = function(){
+            document.getElementById("container").style.backgroundColor = "green";
+        }
+        document.getElementById("blue").onclick = function(){
+            document.getElementById("container").style.backgroundColor = "blue";
+        }
+        document.getElementById("black").onclick = function(){
+            document.getElementById("container").style.backgroundColor = "black";
+            document.getElementById("h4").style.color = "white";
+            document.getElementById("h1").style.color = "white";
+        }
+    </script>
+</body>
+
+</html>

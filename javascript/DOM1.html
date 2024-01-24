@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document object module</title>
+</head>
+<body>
+
+   <input type="text" placeholder="enter your number 1" id="input1">   
+      <input type="text" placeholder="enter your number 2" id="input2"> 
+      <select name="" id="select">
+         <option value="">none</option>
+         <option value="+" id="Add">Add</option>
+         <option value="-">Minus</option>
+         <option value="*">Mul</option>
+      </select> 
+    <!-- <button id="btn">print</button>
+    <button id="red">red</button>
+    <button id="green">green</button>
+    <button id="italic">italic</button>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+    <h1 id="h1"></h1>
+    <input type="text" placeholder="enter your number" id="input">
+    <input type="text" placeholder="enter your number" id="input1"> 
+    <button id="submit">submit</button> -->
+    <script>
+   //   document.getElementById("btn").onclick = function(){
+   //      document.getElementById("h1").innerText = "hello javascript";
+   //   }
+   //   document.getElementById("red").onclick = function(){
+   //      document.getElementById("h1").style.color = "red";
+   //   }
+   //   document.getElementById("green").onclick = function(){
+   //      document.getElementById("h1").style.color = "green";
+   //   }
+   //   document.getElementById("italic").onclick = function(){
+   //      document.getElementById("h1").style.fontStyle = "italic"
+   //   };
+   //   document.getElementById("plus").onclick = function(){
+      
+   //   };
+   //   document.getElementById("minus").onclick = function(){
+   //      let a = document.getElementById("h1").style.fontSize.value;
+   //      console.log(a);
+   //   };
+
+   //   document.getElementById("submit").onclick = function(){
+   //     let a = Number(document.getElementById("input").value);
+   //     let b = Number(document.getElementById("input1").value);
+   //     console.log(a+b);
+   //    }
+
+   document.getElementById("select").onclick = function(){
+      let a =  Number(document.getElementById("input1").value);
+      let b =  Number(document.getElementById("input2").value);
+      let c = document.getElementById("select").value;
+       if(c=="+"){
+         console.log(a+b);
+       }
+       else if(c=="-"){
+         console.log(a-b);
+       }
+       else if(c=="*"){
+         console.log(a*b);
+       }
+      }
+   
+ 
+    </script>
+</body>
+</html>

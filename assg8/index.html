@@ -14,8 +14,9 @@
             padding: 0px;
             box-sizing: border-box;
         }
-        body{
-            font-family: "Roboto",sans-serif;
+
+        body {
+            font-family: "Roboto", sans-serif;
 
         }
 
@@ -88,10 +89,11 @@
             color: black;
             margin: 0px 40px;
         }
-        
-        .bar-right ul li a:hover{
+
+        .bar-right ul li a:hover {
             color: #71cd14;
         }
+
         .icon {
             font-size: 16px;
             line-height: 40px;
@@ -420,19 +422,18 @@
         .rows {
             /* height: 800px; */
             margin-top: 80px;
+            margin-left: 100px;
             display: flex;
         }
 
         .col-1 {
-            /* width: 50%; */
             text-align: center;
             background-color: #f6f6f6;
-            /* background-color: yellow; */
-            height: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            margin: 50px 0px;
         }
 
         .upper-text {
@@ -476,6 +477,7 @@
 
         .col-2 {
             margin-left: 25px;
+            margin-bottom: 20px;
             /* height: 100%; */
             /* width: 50%; */
             display: flex;
@@ -484,6 +486,11 @@
 
         .text-boxes {
             background-color: #ffff;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
         }
 
         .text-boxes a {
@@ -502,7 +509,6 @@
 
         .hover-views {
             position: relative;
-            bottom: 45px;
             width: 100%;
 
         }
@@ -519,25 +525,29 @@
         .hov {
             text-align: center;
             padding: 10px 0px;
-            display: none;
             background-color: rgba(113, 205, 20, 0.4);
+            transition: all 0.8s ease-in-out;
         }
 
         .firsts:hover .hov {
-            display: block;
+
+            transform: translateY(-40px);
+        
         }
 
         .seconds:hover .hov {
-            display: block;
+            transform: translateY(-40px);
         }
 
         .firsts {
-            margin: 0px 50px;
+            margin: 50px 50px;
+        }
+        .seconds{
+            margin: 50px 0px;
         }
 
         .hover-views a:hover {
-            background-color: #71cd14;
-            color: white;
+            color: #71cd14;
         }
 
         .product-row {
@@ -627,7 +637,8 @@
             text-decoration: none;
             font-size: 18px;
         }
-        .top-product ul li a:hover{
+
+        .top-product ul li a:hover {
             color: white;
         }
 
@@ -677,23 +688,28 @@
         .para {
             color: #797979;
         }
-         .footer-bottom{
+
+        .footer-bottom {
             display: flex;
             margin-left: 35px;
-         }
+        }
+
         .footer-text {
             color: #ffffff;
             margin: 30px 50px;
         }
-        .footer-logo{
+
+        .footer-logo {
             margin: 30px 220px;
         }
-        .footer-logo a{
+
+        .footer-logo a {
             background-color: rgb(255, 255, 255, 0.15);
             padding: 15px 15px;
             color: #ffffff;
         }
-        .footer-logo a:hover{
+
+        .footer-logo a:hover {
             background-color: #71cd14;
         }
 
@@ -702,37 +718,44 @@
                 margin: 12px;
             }
         }
+
         @media (max-width:1400px) {
-            .feature-text{
+            .feature-text {
                 position: relative;
                 left: 213px;
-            }   
+            }
         }
+
         @media (max-width:768px) {
-            .feature-text{
+            .feature-text {
                 position: relative;
                 left: 313px;
-            }   
-            .box-1{
+            }
+
+            .box-1 {
                 width: 47%;
                 height: 100%;
             }
         }
+
         @media (max-width:426px) {
-            .feature-text{
+            .feature-text {
                 position: relative;
                 left: 550px;
-            }   
-            .main-text s{
+            }
+
+            .main-text s {
                 min-height: 0px;
             }
-            .box-1{
+
+            .box-1 {
                 width: 100%;
                 height: 100%;
                 font-size: 70px;
                 padding: 150px 0px;
             }
-            .inner-box a{
+
+            .inner-box a {
                 font-size: 100px;
             }
         }
@@ -814,13 +837,10 @@
                 margin-right: 430px;
             }
 
-          
+
         }
 
-        @media (max-width:227px) {
-
-           
-        }
+        @media (max-width:227px) {}
     </style>
 </head>
 
@@ -1457,7 +1477,8 @@
             </div>
             <div class="footer-bottom">
                 <div class="footer-text">
-                    <p>Copyright ©2024 All rights reserved | This template is made with <span><i class="fa-regular fa-heart"></i></span>by Colorlib</p>
+                    <p>Copyright ©2024 All rights reserved | This template is made with <span><i
+                                class="fa-regular fa-heart"></i></span>by Colorlib</p>
                 </div>
                 <div class="footer-logo">
                     <a href="#"><i class="fa-brands fa-facebook"></i></a>

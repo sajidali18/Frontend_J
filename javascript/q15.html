@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Write a Java Script Program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer. Calculate percentage and grade according to following:. -->
+    <script>
+        let Physics = parseInt(prompt("enter the marks of physics"));
+        let Chemistry = parseInt(prompt("enter the marks of chemistry"));
+        let math = parseInt(prompt("enter the marks of math"));
+        let Biology = parseInt(prompt("enter the marks of biology"));
+        let Computer = parseInt(prompt("enter the marks of computer"));
+        let sum = Physics + Chemistry + math + Biology + Computer;
+
+        let percentage = parseFloat((sum / 500) * 100);
+
+        if ((percentage >= 90) && (percentage<= 100)) {
+            console.log("grade A");
+        }
+        else if ((percentage>= 80) && (percentage<= 90)) {
+            console.log("grade B");
+        }
+        else if ((percentage>= 70) && (percentage<= 80)) {
+            console.log("Grade C");
+        }
+        else if ((percentage>= 60) && (percentage<= 70)) {
+            console.log("grade D");
+        }
+        else if ((percentage>= 40 && percentage<= 60)) {
+            console.log("Grade E");
+        }
+        else {
+            console.log("grade F");
+        }
+
+
+    </script>
+</body>
+
+</html>

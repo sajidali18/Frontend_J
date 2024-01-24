@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Write a Java Script Program to check whether the triangle is equilateral, isosceles or scalene triangle. -->
+    <script>
+        let a = prompt("enter the  value of side a");
+        let b = prompt("enter the value of side  b");
+        let c = prompt("enter the value of side  c");
+        if(a==b==c){
+            console.log("triangle is equilateral");
+        }
+        else if((a==b && b!=c) || (a==c && b!=a) || (b==c && b!=a)){
+            console.log("triangle is isosceles");
+        }
+        else{
+            console.log("triangle is scalene");
+        }
+    </script>
+</body>
+</html>
