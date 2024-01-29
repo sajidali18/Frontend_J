@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <style>
     #h4 {
@@ -20,8 +21,8 @@
 
     #red {
         margin-right: 10px;
-        border-radius: 25px;
-        padding: 25px;
+        border-radius: 50px;
+        padding: 20px;
         background-color: red;
         border: none;
         cursor: pointer;
@@ -31,8 +32,8 @@
     #yellow {
         background-color: yellow;
         margin-right: 10px;
-        border-radius: 25px;
-        padding: 25px;
+        border-radius: 50px;
+        padding: 20px;
         border: none;
         cursor: pointer;
     }
@@ -40,8 +41,8 @@
     #green{
         background-color: green;
         margin-right: 10px;
-        border-radius: 25px;
-        padding: 25px;
+        border-radius: 50px;
+        padding: 20px;
         cursor: pointer;
         border: none;
     }
@@ -49,8 +50,8 @@
     #blue {
         background-color: blue;
         margin-right: 10px;
-        border-radius: 25px;
-        padding: 25px;
+        border-radius: 50px;
+        padding: 20px;
         border: none;
         cursor: pointer;
     }
@@ -58,8 +59,8 @@
     #black {
         background-color: black;
         margin-right: 10px;
-        border-radius: 25px;
-        padding: 25px;
+        border-radius: 50px;
+        padding: 20px;
         border: none;
         cursor: pointer;
     }
@@ -70,10 +71,14 @@
         padding: 0px 0px;
     }
     .container{
-        height: 900px;
+        width: 50%;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        background-color: white;
+        margin: auto;
+        border: 2px solid black;
     }
     .class button{
         background-color: green;
@@ -83,15 +88,17 @@
         color: white;
     }
     
+    
 </style>
 
-<body>
-    <div class="container" id="container">
+<body id="container">
+    <div class="container" >
     <h1 id="h1">Select Your Domain</h1>
     <select name="" id="select">
-        <option value="">Make Your Choice</option>
+        <option value="make your choice">Make Your Choice</option>
         <option value="react">React </option>
         <option value="django">Django</option>
+        <option value="angular">Angular</option>
         <option value="AWS">AWS</option>
     </select>
     <div class="colors">
@@ -124,9 +131,16 @@
                 document.getElementById("h4").innerText = "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of web development, so you can focus on writing your app without needing to reinvent the wheel. It’s free and open source.The DSF makes an annual award in honour of early Django contributor Malcolm Tredinnick, to the person who best exemplifies the spirit of Malcolm’s work - someone who welcomes, supports and nurtures newcomers; freely gives feedback and assistance to others, and helps to grow the community."
                 document.getElementById("buttons").style.display = "block";
             }
+            else if(a=="angular"){
+                document.getElementById("h4").innerText = "AngularJS is a discontinued free and open-source JavaScript-based web framework for developing single-page applications. It was maintained mainly by Google and a community of individuals and corporations. It aimed to simplify both the development and the testing of such applications by providing a framework for client-side model–view–controller (MVC) and model–view–viewmodel (MVVM) architectures, along with components commonly used in web applications and progressive web applications.AngularJS was used as the frontend of the MEAN stack, that consisted of MongoDB database, Express.js web application server framework, AngularJS itself (or Angular), and Node.js server runtime environment.";
+                document.getElementById("buttons").style.display = "block";
+            }
             else if (a == "AWS") {
                 document.getElementById("h4").innerText = "AWS services are delivered to customers via a network of AWS server farms located throughout the world. Fees are based on a combination of usage (known as a  model), hardware, operating system, software, or networking features chosen by the subscriber require availability, redundancy, security, and service options. Subscribers can pay for a single virtual AWS computer, a dedicated physical computer, or clusters of either.[7] Amazon provides select portions of security for subscribers (e.g. physical security of the data centers) while other aspects of security are the responsibility of the subscriber (e.g. account management, vulnerability scanning, patching). AWS operates from many global geographical regions including seven in North America.";
                 document.getElementById("buttons").style.display = "block";
+            }
+            else{
+                document.getElementById("h4").innerText = "";
             }
         }
         document.getElementById("btn1").onclick = function () {

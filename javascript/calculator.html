@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cal-box{
+           background-color: rgb(79, 79, 79);
+        }
+        input[type="text"]{
+            padding: 20px 60px;
+            margin: 5px 0px;
+        }
+        .input{
+            margin: 0px 5px;
+        }
+        .buttons{
+          margin: 0px 20px;
+          width: 62%;
+        }
+        .buttons ul{
+            display: flex;
+            /* flex-wrap: wrap; */
+        }
+        input[type="button"]{
+            padding: 8px 14px;
+            margin-right: 5px;
+            background-color: #ffff;
+            border: none;
+        }
+        input[value="clear"]{
+            padding: 8px 5px;
+        }
+        ul{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+       <h1>calculator</h1>
+       <div class="cal-box">
+           <!-- <div class="input"id="inputs"> -->
+            <input type="text" placeholder="enter the digit number" id="inputs" >
+           <!-- </div> -->
+           <div class="buttons">
+            <ul>
+                <li><input type="button" value="7" onclick="inputs.value+='7'"></li>
+                <li><input type="button" value="8" onclick="inputs.value+='8'"></li>
+                <li><input type="button" value="9" onclick="inputs.value+='9'"></li>
+                <li><input type="button" value="*" onclick="inputs.value+='*'"></li>        
+            </ul>
+            <ul>
+                <li><input type="button" value="4" onclick="inputs.value+='4'"></li>
+                <li><input type="button" value="5" onclick="inputs.value+='5'"></li>
+                <li><input type="button" value="6" onclick="inputs.value+='6'"></li>
+                <li><input type="button" value="-" onclick="inputs.value+='-'"></li>
+            </ul>
+            <ul>
+                <li><input type="button" value="1" onclick="inputs.value+='1'"></li>
+                <li><input type="button" value="2" onclick="inputs.value+='2'"></li>
+                <li><input type="button" value="3" onclick="inputs.value+='3'"></li>
+                <li><input type="button" value="+" onclick="inputs.value+='+'"></li>
+            </ul>
+            <ul>
+                <li><input type="button" value="0" onclick="inputs.value+='0'"></li>
+                <li><input type="button" value="=" onclick = "inputs.value = eval(inputs.value)"></li>
+                <li><input type="button" value="." onclick="inputs.value+='.'"></li>
+                <li><input type="button" value="clear" onclick="inputs.value=''"></li>
+            </ul>
+           </div>
+       </div>
+   </div>
+   <script>
+            
+            
+   </script>
+</body>
+</html>
