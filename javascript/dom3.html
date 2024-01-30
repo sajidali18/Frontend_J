@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>query selecter </title>
+</head>
+<body>
+    <button class="btn" id="1">submit</button>
+    <button class="btn" id="2">submit</button>
+    <button class="btn" id="3">submit</button>
+    <button class="btn" id="4">submit</button>
+    <button class="btn" id="5">submit</button>
+    <script>
+           let a = document.querySelectorAll(".btn");
+        //    console.log(a);
+           for(let i =0; i<a.length; i++){
+               a[i].onclick = function(e){
+                   console.log(e.target.id);
+                   console.log("hellow world");
+                                     
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timing watch</title>
+</head>
+<style>
+    .container{
+        position: relative;
+        left: 150px;
+        top: 150px;
+    }
+    input{
+        background: none;
+        border: none;
+        font-size: 25px;
+        padding: 0px;
+        font-weight: 500;
+    }
+    span{
+        font-size: 25px;
+        padding: 1px 2px;
+    }
+</style>
+<body>
+    <div class="container">
+        <input type="button" value="0">
+        <input type="button" value="0" id="minute">
+        <span>:</span>
+        <input type="button" value="0">
+        <input type="button" value="0" id="second">
+         <br>
+        <button id="btn">start</button>
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function(){
+           let a = document.getElementById("second").value;
+           for(let i=0; i<20; i++){
+               a++;
+               document.getElementById("second").innerText = a;
+           }
+        }
+    </script>
+</body>
+</html>
