@@ -39,24 +39,31 @@
             <button id="btn">submit</button>
         </div>
         <div class="boxes">
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
-            <div class="box"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
         </div>
     </div>
     <script>
         document.getElementById("btn").onclick = function () {
             let a = document.getElementById("input").value;
             let b = document.getElementById("number").value;
-            b = --b;
-            let q = document.querySelectorAll(".box");  
-            q[b].style.backgroundColor = `${a}`;
-            // console.log(q);
+            let e = document.querySelectorAll(".box");
+            for(let i of e){
+
+                if(i.id == b){
+                    i.style.backgroundColor = a;
+                }
+            }
+            // // b = --b;
+            // let q = document.querySelectorAll(".box");  
+            // q[b].style.backgroundColor = `${a}`;
+            // // console.log(q);
         }
     </script>
 </body>

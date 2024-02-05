@@ -12,7 +12,6 @@
         box-sizing: border-box;
     }
     .container{
-        border: 2px solid black;
         display: flex;
         flex-wrap: wrap;
     }
@@ -21,15 +20,6 @@
         padding: 40px 48px;
         border-radius: 43px;
         /* background-color: red; */
-        border: 1px solid black;
-        margin: 2px 3px;
-    }
-    #box1{
-        border: none;
-        padding: 40px 48px;
-        border-radius: 43px;
-        /* background-color: red; */
-        border: 1px solid black;
         margin: 2px 3px;
     }
 </style>
@@ -88,11 +78,22 @@
             //    console.log(sajid);
             //  });
             
-            let a = document.querySelector(".box");
-            a.addEventListener("mouseover",(event)=>{
-                a.style.backgroundColor = `rgb(${rgb()})`;
+            let a = document.querySelectorAll(".box");
+            // for(let i of a){
+
+            //     i.onmouseover = function(){
+                     
+            //           i.style.backgroundColor = `rgb(${rgb()})`;
+            //     }
+            // }
+            a.forEach((item)=>{
+                item.addEventListener("mouseover",(event)=>{
+                    event.target.style.backgroundColor = `rgb(${rgb()})`;
+                });
+                // item.addEventListener("mouseout",(event)=>{
+                //     event.target.style.backgroundColor = "";
+                // });
             });
-    
     </script>
 </body>
 </html>
