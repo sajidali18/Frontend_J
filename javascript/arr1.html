@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // slice
+        // splice
+        // Map = create a new manipulated array
+        // rdeuce
+        // filter
+        // these are three function have called high ordered function  because in these functions have calling callback function.
+
+        // console.log(a.slice(1,8));
+        // console.log(a.slice(5));
+        // // a.splice(1,2,45,15);
+        // a.splice(0,5);
+        // console.log(a);
+       
+        let a  = [110,10,20,30,40,50,80,90,100,200];
+
+        let c =a.map(function(i){
+            return i*3;
+        })
+        console.log(c);
+        let e = a.filter(function(i){
+            return i<50;
+        })
+        console.log(e);        
+
+        let d = a.reduce(function(x,y){
+            return x+y;
+        })
+        console.log(d);        
+    </script>
+</body>
+</html>

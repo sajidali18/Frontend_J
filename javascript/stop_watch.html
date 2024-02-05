@@ -25,22 +25,25 @@
 </style>
 <body>
     <div class="container">
-        <input type="button" value="0">
+        <!-- <input type="button" value="0">
         <input type="button" value="0" id="minute">
         <span>:</span>
         <input type="button" value="0">
         <input type="button" value="0" id="second">
-         <br>
+         <br> -->
         <button id="btn">start</button>
     </div>
     <script>
         document.getElementById("btn").onclick = function(){
-           let a = document.getElementById("second").value;
-           for(let i=0; i<20; i++){
-               a++;
-               document.getElementById("second").innerText = a;
-           }
+            function time(){
+                // let i;
+                i+=1;
+                console.log(i);
+            }
+            setInterval(time,1000);
         }
+        
+    
     </script>
 </body>
 </html>

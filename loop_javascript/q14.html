@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a Java Script Program to calculate sum of digits of a number.. -->
+    <script>
+        let x = prompt("enter the number");
+        let sum = 0;
+        let temp = x;
+        while(x!=0){
+            last = Math.floor(x%10);
+            sum = sum + last;
+            x = Math.floor(x/10);
+        }
+        console.log(`sum of digits of a ${temp} is`,sum);
+    </script>
+</body>
+</html>

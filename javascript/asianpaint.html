@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 50px 50px;
+            margin: 4px 1px;
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 50px 198px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .input {
+            margin: 60px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="input">
+            <input type="text" placeholder="enter your color" id="input">
+            <input type="number" placeholder="select your div" id="number">
+            <button id="btn">submit</button>
+        </div>
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn").onclick = function () {
+            let a = document.getElementById("input").value;
+            let b = document.getElementById("number").value;
+            b = --b;
+            let q = document.querySelectorAll(".box");  
+            q[b].style.backgroundColor = `${a}`;
+            // console.log(q);
+        }
+    </script>
+</body>
+</html>

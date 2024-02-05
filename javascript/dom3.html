@@ -10,17 +10,23 @@
     <button class="btn" id="2">submit</button>
     <button class="btn" id="3">submit</button>
     <button class="btn" id="4">submit</button>
-    <button class="btn" id="5">submit</button>
+    <button  id="btn">submit</button>
     <script>
+        // query selector -->
            let a = document.querySelectorAll(".btn");
-        //    console.log(a);
+        //    console.log(a.length);
            for(let i =0; i<a.length; i++){
                a[i].onclick = function(e){
                    console.log(e.target.id);
-                   console.log("hellow world");
-                                     
+                   console.log("hellow world");      
                 }
             }
+        //  event listener -->
+    //    let a = document.getElementById("btn");
+    //    a.addEventListener('click', function(){
+    //     console.log("hello javascript");
+    //    })
+
     </script>
 </body>
 </html>

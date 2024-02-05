@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strong number</title>
+</head>
+<body>
+    <input type="text" placeholder="enter the number" id="input">
+    <button id="btn">submit</button>
+    <script>
+         
+         document.getElementById("btn").onclick = function (){
+        let x = document.getElementById("input").value;
+        let temp = x;
+        let fact = (x) => {
+            let add = 0;
+            while (x!=0) {
+            let rem = 0;
+            let fact = 1;
+            rem = parseInt(x)%parseInt("10");
+            for (let i = 1; i <=rem; i++) {
+                fact= fact * i;
+            }
+            add = parseInt(add)+parseInt(fact);
+            x = parseInt(x/10);
+        }
+        return add;
+    }
+         let ans = fact(x);
+         if(temp==ans){
+            console.log(`${temp} is strong number`);
+         }
+         else{
+            console.log(`${temp} is not strong number`);
+         }  
+        }
+    </script>
+</body>
+</html>

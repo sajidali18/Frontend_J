@@ -1,21 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+<style>
+    body {
+        background: black;
+        font-family: Orbitron;
+    }
+
+    .clock {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: #17D4FE;
+        font-size: 60px;
+
+        letter-spacing: 7px;
+    }
+</style>
+
 <body>
-    <h1 id="h1"></h1>
+    <div id="h1" class="clock" ></div>
     <script>
-        function showtime(){
-        const d = new Date();
-        let hours =d.getHours();
-        let min = d.getMinutes();
-        let sec = d.getSeconds();
-        document.getElementById("h1").innerText = hours +":"+ min+":"+sec;
+        function showtime() {
+            const d = new Date();
+            console.log(d);
+            let h = d.getHours();
+            let m = d.getMinutes();
+            let s = d.getSeconds();
+            let session = "AM";
+            if (h == 0) {
+                h = 12;
+            }
+            if (h > 12) {
+                h = h - 12;
+                session = "PM"
+            }
+            h = (h < 10) ? "0" + h : h;
+            m = (m < 10) ? "0" + m : m;
+            s = (s < 10) ? "0" + s : s;
+
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("h1").innerText = time;
+            document.getElementById("h1").textContent = time;
+            setTimeout(showtime, 1000);
         }
-        setInterval(showtime, 1000);
+        showtime();
     </script>
 </body>
+
 </html>

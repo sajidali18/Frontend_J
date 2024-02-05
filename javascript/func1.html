@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <button id="btn">submit</button>
+    <script>    
+    document.getElementById("btn").onclick = function(){
+        let x = document.getElementById("input").value;
+        let flag = 0;
+        let a = () => {
+            for (i = 2; i < x; i++) {
+                if (x % i == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+            if (flag == 0) {
+                console.log("no. is prime no.");
+            }
+            else {
+               console.log("no. is not prime no.")
+            }
+        }
+        a();
+    };
+        // let x = prompt("enter the input");
+  
+        
+
+    </script>
+</body>
+
+</html>

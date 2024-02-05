@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <input type="text" placeholder="enter the number" id="input">
+  <button id="btn">submit</button>
+    <script>
+      document.getElementById("btn").onclick = function(){
+        let x = document.getElementById("input").value;
+      // let x = prompt("enter the number which you have want to know about armstroong number");
+      let temp = x;
+       let digit_count = (x) =>{
+       let  count = 1;
+        for(let i = 1; i<x;i++){
+          count++;
+          x = parseInt(x)/parseInt("10");
+        }
+        return count;
+    }
+    let digit = digit_count(x);
+      let cube = (x) => {
+        let sum = 0;
+        let rem = 0;
+        while(x!=0){
+        let mul= 1;
+        rem  = x%10;
+        for(let i=0; i<digit; i++){
+         mul = parseInt(mul) * parseInt(rem);
+        }
+        sum = parseInt(sum) + parseInt(mul);
+        x = parseInt(x)/parseInt("10");
+        }
+        return sum;
+      }
+      let ans = cube(x);
+      if(ans ==temp ){
+        console.log(`${temp} is  armstrong number`);
+      }
+      else{
+        console.log(`${temp} is not armstrong number`);
+      }
+    }
+    </script>
+</body>
+</html>
