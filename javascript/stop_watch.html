@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>timing watch</title>
 </head>
 <style>
-    .container{
+    .container {
         position: relative;
         left: 150px;
         top: 150px;
     }
-    input{
+    input {
         background: none;
         border: none;
         font-size: 25px;
         padding: 0px;
         font-weight: 500;
     }
-    span{
+    span {
         font-size: 25px;
         padding: 1px 2px;
     }
 </style>
 <body>
-    <div class="container">
-        <!-- <input type="button" value="0">
-        <input type="button" value="0" id="minute">
-        <span>:</span>
-        <input type="button" value="0">
-        <input type="button" value="0" id="second">
-         <br> -->
-        <button id="btn">start</button>
-    </div>
-    <script>
-        document.getElementById("btn").onclick = function(){
-            function time(){
-                // let i;
-                i+=1;
-                console.log(i);
-            }
-            setInterval(time,1000);
-        }
-        
+         <input type="number" value="0" id="milsecond">
+         <input type="number" value="0" id="second">
+         <input type="number" value="0" id="minute">
+         <button id="btn">start</button>
+<script>
+    document.getElementById("btn").onclick = function(){
+    let counter = "00";
+    let second = "00";
+    let minute = "00";
+    setInterval(function (){
+       counter++;
+       document.getElementById("milsecond").value = counter;
+       if (counter == 100){
+        counter = 0;
+        second ++;
+        document.getElementById("second").value = second;
+       }
+       if(second==60){
+         second=0;
+         minute++;
+         document.getElementById("minute").value = minute;
+       }
+    },10)
+    }
     
-    </script>
+</script>
 </body>
 </html>

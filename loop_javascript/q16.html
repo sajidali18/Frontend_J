@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Write a Java Script Program to enter a number and print its reverse. -->
+    <script>
+        let x = prompt("enter the number that youu want to reverse");
+        let reverse = 0;
+        while(x!=0){
+            let rem = parseInt(x%10);
+            reverse = reverse*10 + rem;
+            x = parseInt(x/10);
+        }
+        console.log(reverse);
+    </script>
+</body>
+</html>

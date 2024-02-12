@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const complexData = [
+        //     {
+        //         id: 1,
+        //         name: 'John Doe',
+        //         age: 30,
+        //         address: {
+        //             street: '123 Main St',
+        //             city: 'Anytown',
+        //             country: 'USA'
+        //         },
+        //         orders: [
+        //             { orderId: 'A123', amount: 50.75, status: 'completed' },
+        //             { orderId: 'B456', amount: 30.25, status: 'pending' }
+        //         ]
+        //     },
+        //     {
+        //         id: 2,
+        //         name: 'Jane Smith',
+        //         age: 25,
+        //         address: {
+        //             street: '456 Oak St',
+        //             city: 'Othercity',
+        //             country: 'USA'
+        //         },
+        //         orders: [
+        //             { orderId: 'C789', amount: 100.50, status: 'completed' },
+        //             { orderId: 'D012', amount: 75.20, status: 'completed' }
+        //         ]
+        //     },
+
+        // ];
+
+
+
+
+        // 1. Filter users who are aged 25 or younger.
+
+        //   let a = complexData.filter(function(i){
+        //     return i.age<=25;
+        //   });
+        //   console.log(a);
+
+        //   // 2. Map the array to get an array of user names.
+
+        //   let b = complexData.map(function(i){
+        //     return i.name;
+        //   })
+
+        //   console.log(b);
+
+        //   3. Filter orders with an amount greater than 50.
+
+        // let ans = complexData.flatMap((item)=>{
+
+        //      let b = item.orders.filter((data)=>{
+        //         return data.amount>50;
+        //     });
+        //     return b.map((i)=>{
+        //         return i.amount;
+        //     });;
+        // })
+        // console.log(ans);
+
+        // 4. Map the array to get an array of order IDs.
+
+        // let a = complexData.flatMap((item)=>{
+
+        //      return item.orders.map((data)=>{
+        //        return data;
+        //      })
+        // })
+        // console.log(a);
+
+        const complexData = [
+            {
+                id: 1,
+                name: 'John Doe',
+                age: 30,
+                address: {
+                    street: '123 Main St',
+                    city: 'Anytown',
+                    country: 'USA'
+                },
+                orders: [
+                    { orderId: 'A123', amount: 50.75, status: 'completed' },
+                    { orderId: 'B456', amount: 30.25, status: 'pending' }
+                ]
+            },
+            {
+                id: 2,
+                name: 'Jane Smith',
+                age: 25,
+                address: {
+                    street: '456 Oak St',
+                    city: 'Othercity',
+                    country: 'USA'
+                },
+                orders: [
+                    { orderId: 'C789', amount: 100.50, status: 'completed' },
+                    { orderId: 'D012', amount: 75.20, status: 'completed' }
+                ]
+            },
+        ];
+        // 5.Filter users who have at least one order with a status of 'pending'
+        // let a = complexData.flatMap(function(item){
+        //     return item.orders.filter(function(data){
+        //         return data.status =="completed";
+        //    });
+        // })
+
+        // let a = complexData.flatMap((item) => item.orders.filter((data) => data.status == "pending"));
+        // console.log(a);
+
+        // 6 .Filter orders with an amount between 30 and 70.
+        // let b = complexData.flatMap((item) => item.orders.filter((data) => data.amount >= 30 && data.amount <= 70));
+        // console.log(b);
+
+        // 7 .Map the array to get an array of objects containing user names and their total order amounts.
+
+        let c = complexData.flatMap((item) => {
+            const total_amount = item.orders.reduce((x, y) => {
+                return x.amount + y.amount
+            })
+            return {
+                name: item.name,
+                totalamount: total_amount
+            };
+        })
+        console.log(c)
+
+        // 8 .Map the array to get an array of objects containing user names and their completed order IDs.
+
+        // let d = complexData.flatMap((item)=>{
+        //      const order_id =  item.orders.filter((i)=>{
+        //         return i.orderId;
+        //      })
+        //      return order_id;
+        // })
+        // console.log(d);
+
+
+        let d = complexData.flatMap((item)=>{
+             const order_id =  item.orders.filter((i)=>{
+                if(i.status=="completed"){
+                    return i.orderId;
+                }
+             })
+             return {
+                name: item.name,
+                orderId : order_id
+             };
+        })
+        console.log(d);
+
+        
+
+
+    </script>
+</body>
+
+</html>

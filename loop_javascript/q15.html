@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Write a Java Script Program to calculate product of digits of a number. -->
+    <script>
+        let x = prompt("enter the number that calucate product");
+        let mul =1;
+        while(x!=0){
+            let rem = parseInt(x%10);
+            mul= mul * rem;
+            x = parseInt(x/10);
+        }
+        console.log(mul);
+    </script>
+</body>
+</html>

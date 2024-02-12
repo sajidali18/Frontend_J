@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let obj1 = {
+        //     id: 1,
+        //     name: "mohit",
+        //     age: 25,
+        //     city: "jaipur"
+        // };
+        // let obj2 = {
+        //     id: 2,
+        //     name: "rohit",
+        //     age: 55,
+        //     city: "udaipur"
+        // };
+        // console.log(obj1.id,obj1.name,obj1.age,obj1.city);
+        // for(let i in obj1){
+        //     console.log(obj1[i])
+        // }
+        // for(let i in obj2){
+        //     console.log(obj2[i])
+        // }
+          let arr = [
+            {
+            id: 1,
+            name: "mohit",
+            age: 25,
+            city: "jaipur"
+            },
+            {
+            id: 2,
+            name: "rohit",
+            age: 55,
+            city: "udaipur"
+            },
+            {
+            id: 3,
+            name: "ankit",
+            age: 18,
+            city: "sikar"
+            },
+            {
+            id: 4,
+            name: "aman",
+            age: 35,
+            city: "jodhpur"
+            },
+            {
+            id: 5,
+            name: "vishal",
+            age: 75,
+            city: "mumbai"
+            },
+            {
+            id: 6,
+            name: "arbaz",
+            age: 61,
+            city: "delhi"
+            },
+            {
+            id: 7,
+            name: "anu",
+            age: 40,
+            city: "banglore"
+            },
+            {
+            id: 8,
+            name: "aavesh",
+            age: 55,
+            city: "kolkata"
+            },
+            {
+            id: 9,
+            name: "sahil",
+            age: 45,
+            city: "churu"
+            },
+            {
+            id: 10,
+            name: "azeem",
+            age: 55,
+            city: "manali"
+            }
+          ]
+        //   for(let i in arr){
+        //     if(arr[i].age>50){
+        //         console.log(arr[i]);
+        //     }
+        //     else{
+        //         // console.log("hello js")
+        //     }
+        //   }
+
+        //   let a =  arr.filter(function(i){
+        //     return i.age>50;
+        //   });
+        //   console.log(a);
+        let names =  arr.map(function(i){
+            return i.name;
+        })
+        console.log(names);
+
+           
+          
+    </script>
+</body>
+</html>
