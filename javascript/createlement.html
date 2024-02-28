@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 80vh;
+        height: 50vh;
+    }
+    .box{
+        border: 2px solid black;
+        display: inline-block;
+        text-align: center;
+
+    }
+</style>
+<body>
+    <script>
+        let d = document.createElement('div');
+        let i = document.createElement('img');
+        let p = document.createElement('p');
+        i.src = "https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-james-wheeler-414612.jpg&fm=jpg";
+        p.innerText = "this is my text";
+        d.appendChild(i);
+        d.append(p)
+        document.body.append(d);
+        console.log(d)
+        d.className = "box";
+        i.className = "img";
+        p.className = "text";
+
+        
+    </script>
+</body>
+</html>

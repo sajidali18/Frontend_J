@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+      display: inline-block;
+      width: 24%;
+      text-align: center;
+    }
+    .images{
+        width: 100%;
+        /* height: 1%; */
+        display: inline-block;
+        margin: 1px 15px;
+        padding: 0px 0px;
+    }
+</style>
+<body>
+    <script>
+        const data = fetch('https://dummyjson.com/recipes');
+        data.then((Response)=>{
+           Response.json().then((result)=>{
+            result.recipes.map((item)=>{
+                console.log(item)
+                let d = document.createElement('div');
+                d.className = "box";
+                let i = document.createElement('img');
+                i.className   = "images";
+                let p = document.createElement('p');
+                let price  = document.createElement('h1');
+                price.innerText = "Price = " + item.caloriesPerServing;
+                d.appendChild(i);
+                d.appendChild(p);
+                d.appendChild(price);
+                console.log(d)
+                i.src = item.image;
+                p.innerText = item.name
+                document.body.append(d);
+            })
+           })
+        })
+    </script>
+</body>
+</html>

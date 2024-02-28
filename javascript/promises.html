@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let prom = new Promise((resolve, reject)=>{
+        //     if (true){
+        //         resolve("promise pura hua");
+        //     }
+        //     else{
+        //         reject("promise adhura haua");
+        //     }
+        // });  
+        // prom.then((result)=>{
+        //     console.log(result);
+        // }).catch((error)=>{
+        //     console.log(error);
+        // })
+
+         
+        function party(order){
+            console.log("loading..")
+            return new Promise((resolve, result)=>{
+                setTimeout(()=>{
+                 resolve(order);
+                },3000)
+            })
+        }
+        // party("pizza").then((result)=>{
+        //     console.log(result);
+        //     party("burger").then((result)=>{
+        //         console.log(result);
+        //         party("patties").then((result)=>{
+        //             console.log(result);
+        //         })
+        //     })
+        // })
+
+        async function output(){
+            let pizza = await party("pizza");
+            console.log(pizza);
+            let burger = await party ("burger");
+            console.log(burger);
+            let cold_drink = await party ("cold drink");
+            console.log(cold_drink);
+        }
+        output();
+    </script>
+</body>
+</html>

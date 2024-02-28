@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        text-align: center;
+        margin-top: 4rem;
+    }
+
+    .button {
+        font-size: 10px;
+        padding: 0px 13px;
+        margin-left: 5px;
+        border-radius: 10px;
+        outline: auto;
+    }
+
+    .box1 {
+        display: flex;
+    }
+
+    .detail {
+        margin-top: 6rem;
+    }
+
+    .div {
+        width: 100vh;
+        height: 50vh;
+        text-align: center;
+        margin: 6rem 10rem;
+        /* margin: 0 auto; */
+        border: 2px solid black;
+    }
+
+    .images {
+        width: 100%;
+        height: 100%;
+    }
+
+    #input {
+        padding: 8px 30px;
+        border-radius: 10px;
+        /* border: none; */
+        outline: auto;
+    }
+</style>
+
+<body>
+    <p><del>6000</del>500</p>
+    <script>
+        let container = document.createElement('div');
+        container.className = "box";
+        let input = document.createElement('input');
+        input.type = "text";
+        input.placeholder = "enter your recipes"
+        input.id = "input"
+        container.appendChild(input);
+        let btn = document.createElement("button");
+        btn.id = "butn";
+        let p = document.createElement("p");
+        p.innerHTML = "submit";
+        btn.className = "button";
+        btn.appendChild(p);
+        container.appendChild(btn)
+        document.body.append(container)
+        let button = document.getElementById("butn");
+        let inp = document.getElementById("input");
+        button.addEventListener("click", function () {
+            input_function();
+
+        })
+
+        function input_function() {
+            const data = fetch('https://dummyjson.com/recipes').then((Response) => {
+                Response.json().then((result) => {
+                    const output = result.recipes.filter((item) => {
+                        return item.name == `${inp.value}`;
+                    })
+
+                    output.map((i) => {
+                        // console.log(i.instructions)
+                        let a = i.instructions;
+                        // console.log(a.join())
+                        if (i.name == input.value) {
+                            let box1 = document.createElement('div');
+                            box1.className = "box1"
+                            let box = document.createElement('div');
+                            box.className = "div"
+                            let im = document.createElement('img');
+                            let text = document.createElement('h1');
+                            let p = document.createElement('p');
+                            p.innerText =  `price  = ${i.caloriesPerServing}`
+                            text.innerText = `${i.name}`
+                            im.className = "images"
+                            im.src = `${i.image}`
+                            box.appendChild(im);
+                            box.appendChild(text);
+                            box.appendChild(p);
+                            box1.appendChild(box)
+                            let detail = document.createElement("div");
+                            detail.className = "detail"
+                            let h3 = document.createElement("h3");
+                            h3.innerText = "Recipes Detail"
+                            detail.appendChild(h3)
+                            box1.appendChild(detail)
+                            let p1 = document.createElement('p')
+                            p1.innerText = `${a.join()}`
+                            detail.appendChild(p1)
+                            let texts = document.createElement("div");
+                            texts.className = "texts";
+                            let p2 = document.createElement('h4');
+                            p2.innerText = "Name : " + `${i.name}`
+                            let p3 = document.createElement('h4');
+                            p3.innerText = "cookTimeMinutes : " + `${i.cookTimeMinutes}`
+                            let p4 = document.createElement('h4');
+                            p4.innerText = "cuisine : " + `${i.cuisine}`;
+                            let p5 = document.createElement('h4');
+                            p5.innerText = "MealType : " + `${i.mealType}`;
+                            let p6 = document.createElement('h4');
+                            p6.innerText = "Rating : " + `${i.rating}`;
+                            let p7 = document.createElement('h4');
+                            p7.innerText = "prepTimeMinutes : " + `${i.prepTimeMinutes}`;
+                            texts.appendChild(p2);
+                            texts.appendChild(p3);
+                            texts.appendChild(p4);
+                            texts.appendChild(p5);
+                            texts.appendChild(p6);
+                            texts.appendChild(p7);
+                            detail.appendChild(texts);
+                            document.body.append(box1)
+                        }
+                        else {
+                            //   let a = document.createElement('h1');
+                            //   a.innerText = "plz input correct recipe name";
+                            //   document.body.appendChild(a)
+                        }
+                    })
+                })
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

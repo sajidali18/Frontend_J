@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #pic{
+        border: 2px solid black;
+        /* width: 200px;
+        height: 200px; */
+    }
+    /* .container{
+        display: flex;
+        flex-wrap: wrap;
+    } */
+</style>
+<body>
+    <script>
+        function party(output){
+          return new Promise((resolve,reject)=>{
+            resolve(output);
+          })
+        }
+
+        async function output(){
+            const api =  await fetch("https://dummyjson.com/products");
+            // const log =  await api.json();
+            // console.log(api)
+          api.map((objectdata)=>{
+            return objectdata
+          })
+
+        // const arr = document.createElement("div");
+        // arr.innerHTML = 
+        // document.body.appendChild(arr);
+        }
+        output();
+        
+    </script>
+</body>
+</html>

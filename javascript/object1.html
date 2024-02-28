@@ -128,16 +128,16 @@
 
         // 7 .Map the array to get an array of objects containing user names and their total order amounts.
 
-        let c = complexData.flatMap((item) => {
-            const total_amount = item.orders.reduce((x, y) => {
-                return x.amount + y.amount
-            })
-            return {
-                name: item.name,
-                totalamount: total_amount
-            };
-        })
-        console.log(c)
+        // let c = complexData.flatMap((item) => {
+        //     const total_amount = item.orders.reduce((x, y) => {
+        //         return x.amount + y.amount
+        //     })
+        //     return {
+        //         name: item.name,
+        //         totalamount: total_amount
+        //     };
+        // })
+        // console.log(c)
 
         // 8 .Map the array to get an array of objects containing user names and their completed order IDs.
 
@@ -156,9 +156,16 @@
                     return i.orderId;
                 }
              })
+
+             const id = order_id.map((x)=>{
+                    
+                return x.orderId
+             })
+
+            //  console.log(id)
+         
              return {
-                name: item.name,
-                orderId : order_id
+                orderId : id.flat(2)
              };
         })
         console.log(d);
