@@ -51,7 +51,7 @@
 </style>
 
 <body>
-    <p><del>6000</del>500</p>
+    <!-- <p><del>6000</del>500</p> -->
     <script>
         let container = document.createElement('div');
         container.className = "box";
@@ -82,6 +82,8 @@
                         return item.name == `${inp.value}`;
                     })
 
+                    if((output.length)!=0){
+
                     output.map((i) => {
                         // console.log(i.instructions)
                         let a = i.instructions;
@@ -94,7 +96,8 @@
                             let im = document.createElement('img');
                             let text = document.createElement('h1');
                             let p = document.createElement('p');
-                            p.innerText =  `price  = ${i.caloriesPerServing}`
+                            let d = document.createElement("del");
+                            p.innerHTML =  `price  = ${i.caloriesPerServing} <del>${(i.caloriesPerServing)*2}</del>`
                             text.innerText = `${i.name}`
                             im.className = "images"
                             im.src = `${i.image}`
@@ -134,15 +137,27 @@
                             detail.appendChild(texts);
                             document.body.append(box1)
                         }
-                        else {
-                            //   let a = document.createElement('h1');
-                            //   a.innerText = "plz input correct recipe name";
-                            //   document.body.appendChild(a)
-                        }
                     })
+
+                }
+                else{
+
+                    // console.log("item not found !!")
+                       let a = document.createElement('h1');
+                              a.innerText = "plz input correct recipe name";
+                              document.body.appendChild(a)
+                }
                 })
+
+            }).catch(error=>{
+                console.log(error)
             })
         }
+
+
+        document.write("<del>Hello</del>")
+
+
 
 
     </script>

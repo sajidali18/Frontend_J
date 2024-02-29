@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let data =  fetch('https://dummyjson.com/recipes').then((response)=>{
+        //     response.json().then((result)=>{
+        //         result.recipes.map((i)=>{
+        //            console.log(i)
+        //         })
+        //     })
+        // })
+
+        // async function output (){
+        //     let data = await fetch('https://dummyjson.com/recipes');
+        //     let x = await data.json();
+        //     console.log(x)
+        // }
+        // output();
+
+        async function output(){
+            let data = await fetch('data.json')
+            let x = await data.json();
+            console.log(x) 
+        }
+        output();
+    </script>
+</body>
+</html>
